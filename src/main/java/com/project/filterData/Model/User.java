@@ -1,9 +1,12 @@
 package com.project.filterData.Model;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class User {
@@ -17,6 +20,10 @@ public class User {
 	private String lastName;
 	private String password;
 	private String email;
+	
+	@ManyToOne(fetch = FetchType.EAGER, optional = false)
+	@JoinColumn(name = "location_id")
+	private Location location;
 	
 	public Integer getId() {
 		return id;
