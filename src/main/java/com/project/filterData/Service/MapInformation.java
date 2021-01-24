@@ -21,7 +21,7 @@ public class MapInformation {
 				      .findAll())
 				      .stream()
 				      .map(this::converterUserLocationDTO)
-				                   .collect(Collectors.toList());
+				      .collect(Collectors.toList());
 	}
 	
 	private UserLocationDTO converterUserLocationDTO(User user) {
