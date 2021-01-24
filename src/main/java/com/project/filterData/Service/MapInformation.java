@@ -29,7 +29,13 @@ public class MapInformation {
 	    UserLocationDTO userLocationDTO = new UserLocationDTO();
 	    userLocationDTO.setId(user.getId());
 	    userLocationDTO.setUsername(user.getUsername());
+	    
 	    Location location = user.getLocation();
+	    userLocationDTO.setLat(location.getLat());
+	    userLocationDTO.setLng(location.getLng());
+	    userLocationDTO.setPlace(location.getPlace());
+	    return userLocationDTO;
+	    
 	}
 	
 }
