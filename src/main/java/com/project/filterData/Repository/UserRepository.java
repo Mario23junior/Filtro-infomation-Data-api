@@ -7,5 +7,4 @@ import com.project.filterData.Model.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer>{
-
 }

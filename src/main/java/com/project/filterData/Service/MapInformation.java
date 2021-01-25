@@ -14,10 +14,11 @@ import com.project.filterData.Repository.UserRepository;
 public class MapInformation {
 
 	private UserRepository userRepository;
-	
+
+ 	
 	public MapInformation(UserRepository userRepository) {
 		this.userRepository = userRepository;
- 	}
+  	}
 	
 	public List<UserLocationDTO> getAllUserLocation() {
 		return ((List<User>) userRepository
@@ -38,7 +39,26 @@ public class MapInformation {
 	    userLocationDTO.setLng(location.getLng());
 	    userLocationDTO.setPlace(location.getPlace());
 	    return userLocationDTO;
-	    
 	}
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

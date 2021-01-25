@@ -21,7 +21,7 @@ public class User {
 	private String password;
 	private String email;
 	
-	@ManyToOne(fetch = FetchType.EAGER, optional = false)
+	@ManyToOne(fetch = FetchType.EAGER, optional = true)
 	@JoinColumn(name = "location_id")
 	private Location location;
 	
